@@ -1,5 +1,6 @@
 const menuOpenButon = document.querySelector("#menu-open-button");
 const menuCloseButon = document.querySelector("#menu-close-button");
+const navLinks = document.querySelectorAll(".nav-menu .nav-link")
 
 menuOpenButon.addEventListener("click",()=>{
     //Toggle mobile menu visibility
@@ -8,6 +9,12 @@ menuOpenButon.addEventListener("click",()=>{
 
 //Close mobile menu
 menuCloseButon.addEventListener("click",()=> menuOpenButon.click())
+
+navLinks.forEach(link =>{
+
+link.addEventListener("click",()=> menuOpenButon.click())
+
+})
 
 
 
